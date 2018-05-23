@@ -1,0 +1,24 @@
+function firstDuplicate(a) {
+ var array =[];
+ var duplicates=[];
+ var checkiftrue=[];
+ for(i=0;i<a.length;i++){
+  array.push(a[i]);
+  for(x=-1;x<a.length;x++){
+  if(array[x]==a[i]){
+   duplicates.push(a[i]);
+  }
+  }
+ }
+ for(i=0;i<a.length ; i++){
+  if(duplicates[i-1]==duplicates[i]){
+   checkiftrue.push(duplicates[i]);
+  }
+ }
+ if(checkiftrue[0]){
+  return checkiftrue[0];
+ }else{
+  return -1;
+ }
+}
+
