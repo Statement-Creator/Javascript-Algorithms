@@ -4,7 +4,7 @@ function firstDuplicate(a) {
  var checkiftrue=[];
  for(i=0;i<a.length;i++){
   array.push(a[i]);
-  for(x=-1;x<a.length;x++){
+  for(x=0;x<a.length;x++){
   if(array[x]==a[i]){
    duplicates.push(a[i]);
   }
