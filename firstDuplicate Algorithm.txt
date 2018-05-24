@@ -21,4 +21,3 @@ function firstDuplicate(a) {
   return -1;
  }
 }
-
