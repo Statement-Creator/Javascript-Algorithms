@@ -1,18 +1,22 @@
 function firstNotRepeatingCharacter(s){
-    var array=[];
-    var array2=[];
+    var string=[];
     for(i=0;i<s.length;i++){
-        array2.push(s.charAt(i));
+        string.push(s.charAt(i))
         for(x=i+1;x<s.length;x++){
-            if(s.charAt(i)==s.charAt(x)){
-                array.push(s.charAt(i));
+            if(s.charAt(x)==s.charAt(i)){
+               delete string[i];
+               }
+        }
+        for(x=i-1;x>=0;x--){
+            if(string[i]==s.charAt(x)){
+                delete string[i];
             }
         }
-        for(x=0;x<array2.length;x++){
-            if(array[i]==array2[x]){
-                array2.splice(x,1);                
-            }
+        if(!string[i-1] && string[i]){
+            return string[i];
         }
     }
-    return array2[0];    
+    if(string[1]==undefined){
+        return "_";
+    }
 }
