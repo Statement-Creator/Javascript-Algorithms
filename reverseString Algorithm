@@ -1,0 +1,9 @@
+const reverseArray = [];
+function reverseString(string){
+	for(i=string.length; i=0;i--){
+  	reverseArray.push(string.charAt(i));
+  }
+  reverseArray.join("");
+  return reverseArray;
+}
+reverseString();
